@@ -8,21 +8,21 @@ app.secret_key = "TiYSKDNRitA!"                                                 
 
 @app.route('/')                                                                     # Main Page
 def index():
-    if 'num_visits' in session:
-        session['num_visits'] += 1
+    if 'num_visits' in session:                                                     # If  num_visits key exists
+        session['num_visits'] += 1                                                  #   increment num_visits by 1
         print("Session key num_visits:", session['num_visits'] )
-    else:
-        session['num_visits'] = 1
+    else:                                                                           # If num_visits key doesn't exist
+    session['num_visits'] = 1                                                       #   initialize num_visits to 1
         print("Session key num_visits:", session['num_visits'] )
     return render_template("index.html")
 
 @app.route('/clear')
-def clear():
-    session.clear();
+def clear():                                                                        # Clears the num_visits
+session.clear();                                                                    #   then redirect to index
     return redirect("/")
 
-@app.route('/add2')
-def add2():
+@app.route('/add2')                                                                 # adds 2 to num_visits by
+def add2():                                                                         #   by incrementing num_visits then returning to index
     if 'num_visits' in session:
         session['num_visits'] += 1
         print("Session key num_visits:", session['num_visits'] )

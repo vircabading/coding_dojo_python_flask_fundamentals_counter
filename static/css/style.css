@@ -12,6 +12,10 @@ main {
     color: white;
 }
 
+.card>* {
+    margin: 10px 0px;
+}
+
 .btn {
     border: none;
     border-radius: 25px;

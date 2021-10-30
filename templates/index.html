@@ -31,22 +31,36 @@
   <main role="main">
     <div class="row justify-content-center">
 
-      <div class="col-md-6 container card ">
+      <div class="col-md-8 container card ">
         <div class="row justify-content-center">
           <h1>Counter</h1>
         </div>
-        <div class="row justify-content-center">
+        <div class="row justify-content-around">
           <h2>
-            Number of website visits: {{ session['num_visits'] }}
+            Website visits: {{ session['num_visits'] }}
+          </h2>
+          <h2>
+            Count: {{ session['count'] }}
           </h2>
         </div>
         <div class="row justify-content-around">
           <button type="button" class="btn btn-light" onclick="window.location.href='/add2'">
-            Add 2 visits
+            Add 2 to count
           </button >
-          <button type="button" class="btn btn-light" onclick="window.location.href='/clear'">
-            Reset
+          <button type="button" class="btn btn-light" onclick="window.location.href='/destroy_session'">
+            Reset All
           </button>
+        </div>
+        <div class="row justify-content-center">
+          <form class=" row align-items-center" action='/increment_by' method='post'>
+            <p>
+              Increase count by specified amount:
+            </p>
+            <input type="text" name="increment_by" id="increment_by" placeholder="123">
+            <button class="enter-selection-btn" type="submit">
+              Enter Selection
+            </button>
+          </form>
         </div>
       </div>
 

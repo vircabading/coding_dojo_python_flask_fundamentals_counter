@@ -13,7 +13,7 @@ def index():
         print("Session key num_visits:", session['num_visits'] )
     else:
         session['num_visits'] = 1
-         print("Session key num_visits:", session['num_visits'] )
+        print("Session key num_visits:", session['num_visits'] )
     return render_template("index.html")
 
 @app.route('/clear')

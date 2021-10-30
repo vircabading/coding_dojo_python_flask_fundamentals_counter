@@ -5,3 +5,18 @@ main {
 .navbar-brand>* {
     margin: 0px 10px;
 }
+
+.card {
+    background-color: navy;
+    padding: 1%;
+    color: white;
+}
+
+.btn {
+    border: none;
+    border-radius: 25px;
+    padding: 0px 10px;
+    background-color: dodgerblue;
+    color: white;
+    font-weight: bold;
+}

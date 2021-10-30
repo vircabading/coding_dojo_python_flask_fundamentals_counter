@@ -29,24 +29,28 @@
   
   <!-- //// MAIN AREA //////// -->
   <main role="main">
-    <div class="container">
-      <div class="row col-md-offset-3">
-        <h1>Counter</h1>
+    <div class="row justify-content-center">
+
+      <div class="col-md-6 container card ">
+        <div class="row justify-content-center">
+          <h1>Counter</h1>
+        </div>
+        <div class="row justify-content-center">
+          <h2>
+            Number of website visits: {{ session['num_visits'] }}
+          </h2>
+        </div>
+        <div class="row justify-content-around">
+          <button type="button" class="btn btn-light">
+            Add 2 visits
+          </button >
+          <button type="button" class="btn btn-light" onclick="window.location.href='/clear'"">
+            Reset
+          </button>
+        </div>
       </div>
-      <div class="row col-md-offset-3">
-        <h2>
-          1 time
-        </h2>
-      </div>
-      <div class="row col-md-offset-3">
-        <button>
-          Add 2 visits
-        </button >
-        <button onclick="window.location.href='/clear'"">
-          Reset
-        </button>
-      </div>
-    </div>    
+
+    </div>
   </main>
     
 </body>

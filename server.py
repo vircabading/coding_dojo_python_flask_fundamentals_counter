@@ -21,5 +21,15 @@ def clear():
     session.clear();
     return redirect("/")
 
+@app.route('/add2')
+def add2():
+    if 'num_visits' in session:
+        session['num_visits'] += 1
+        print("Session key num_visits:", session['num_visits'] )
+    else:
+        session['num_visits'] = 1
+        print("Session key num_visits:", session['num_visits'] )
+    return redirect('/')
+
 if __name__=="__main__":   
     app.run(debug=True)    
